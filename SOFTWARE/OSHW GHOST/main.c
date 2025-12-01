@@ -19,14 +19,12 @@ void Pulse (unsigned char NumberOfPulses)
 {
 	while (NumberOfPulses--)
 	{
-
 			RESET_WATCHDOG();
 	
             LED_ON;
             Delay(32);
 			LED_OFF;
             Delay(64);
-
 	}
 	return;
 }
@@ -83,4 +81,3 @@ int main ()
 	asm("SLEEP");
 	return 0;
 }
-
