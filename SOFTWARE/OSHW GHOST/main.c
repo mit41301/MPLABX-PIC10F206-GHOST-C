@@ -9,11 +9,8 @@
 								OPTION = 0xDD;\
 							}
 
-
-
 #define	DELAY	5	// number of cycles with the same duty cycle
 #define	CYCLES	(long int)DELAY * 256 * (2*NUMBER_OF_STEPS - 2);	// Index: 1-->29; 28-->0 ==> 58 cycles
-
 
 #define	LED_ON	GPIO = GPIO | 0x04	// GPIO2 --> 1
 #define	LED_OFF	GPIO = GPIO & 0xFB	// GPIO2 --> 0
@@ -22,7 +19,6 @@ void Pulse (unsigned char NumberOfPulses)
 {
 	while (NumberOfPulses--)
 	{
-
 
 			RESET_WATCHDOG();
 	
@@ -44,7 +40,6 @@ void Delay (volatile unsigned int Period)
 		RESET_WATCHDOG();
  }   
 }
-
 
 char Button ()
 {
@@ -88,3 +83,4 @@ int main ()
 	asm("SLEEP");
 	return 0;
 }
+
