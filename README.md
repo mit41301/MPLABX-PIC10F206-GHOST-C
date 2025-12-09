@@ -17,4 +17,3 @@ Badge pin and clips
 Battery holder
 Li 3V battery
 PIC ICSP connector (not populated)
-
